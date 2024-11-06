@@ -1,0 +1,17 @@
+<div *ngFor="let item of items">
+    <mat-card class="item-card">
+      <mat-toolbar>
+        <span>{{ item.nome }}</span>
+        <button mat-icon-button (click)="editItem(item)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button (click)="deleteItem(item.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-toolbar>
+      <mat-checkbox [(ngModel)]="item.comprado" (change)="toggleItemComprado(item.id)">
+        {{ item.comprado ? 'Comprado' : 'Não Comprado' }}
+      </mat-checkbox>
+    </mat-card>
+  </div>
+  
