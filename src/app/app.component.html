@@ -3,6 +3,7 @@
 </mat-toolbar>
 
 <div class="container" fxLayout="column" fxLayoutAlign="center stretch">
+  <!-- Formulário de adicionar item -->
   <mat-form-field appearance="fill" class="form-field-responsive">
     <mat-label>Adicionar um novo item</mat-label>
     <input matInput [(ngModel)]="newItem" placeholder="Digite um novo item" />
@@ -47,4 +48,7 @@
       </mat-list-item>
     </mat-list>
   </div>
+
+  <!-- Aqui será renderizado o conteúdo das rotas -->
+  <router-outlet></router-outlet>
 </div>
